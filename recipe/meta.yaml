@@ -19,15 +19,15 @@ build:
   noarch: python
   script:
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - dnspython >=2.0.0
     - authres
     - pynacl
@@ -43,6 +43,7 @@ test:
     - dknewkey --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://launchpad.net/dkimpy
