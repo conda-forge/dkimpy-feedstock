@@ -19,7 +19,6 @@ verification. Basic DKIM requirements are defined in RFC 6376:
 
 https://tools.ietf.org/html/rfc6376
 
-
 Current build status
 ====================
 
